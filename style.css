@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: radial-gradient(circle at 20% 80%, rgb(255, 182, 193) 60%, rgb(190, 83, 119) 95%) fixed;
+    animation: gradient 15s ease infinite;
+    color: #f6f6f6;
+    overflow-x: hidden;
+
+}
+.container {
+    width: 750px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+}
+.container img{
+    width: 200px;
+    height: 180px;
+    margin: 10px auto;
+    border-radius: 25px;
+}
+.container h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.btnn{
+    width: 100px;
+    height: 70px;
+    background-color: #ecfadc;
+    color: #333333;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;              /* Enable flexbox */
+    justify-content: center;    /* Centers horizontally */
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.btnn:hover{
+    background-color: #fff;
+    color: #333333;
+    border: 2px solid #fff;
+}
+.btnn p{
+    padding: auto;
+    margin: 0;
+    cursor: pointer;
+}
+.btnn2{
+    width: fit-content;
+    height: 50px;
+    background-color: #ffc0cb;
+    color: #333333;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;              /* Enable flexbox */
+    justify-content: center;    /* Centers horizontally */
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.btnn2:hover{
+    background-color: #ffe0e5;
+    color: #333333;
+    border: 2px solid #ffe0e5;
+}
+.btnn2 p{
+    padding: auto;
+    margin: 0;
+    cursor: pointer;
+}
+.buttonPart{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.heart {
+
+    font-size: 40px;
+    color: #b01e28;
+    position: absolute;
+    animation: floatHeart 8s infinite;
+    z-index: 1;
+}
+.heart2 {
+
+    font-size: 40px;
+    color: #ffc0cb;
+    position: absolute;
+    animation: floatHeart 8s infinite;
+    z-index: 1;
+}
+@keyframes floatHeart {
+    0% {
+        transform: translateY(-250px);
+    }
+    50% {
+        transform: translateY(350px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/ryan-haight-magnuson-park-large-ezgif.com-crop.gif);
+    background-position: center;
+    background-size: cover; /* Ensures proper scaling */
+    position: relative;
+    
+}
+.thing{
+    height: fit-content;
+    width: 80%;
+    background-color: #f6f6f6;
+    margin: 10%;
+    margin-bottom: 5%;
+    border-radius: 25px;
+}
+.headerimg{
+    
+}
+
+.fullimg{
+    position: absolute;
+   width: fit-content; 
+   top: 31%;
+    margin-left: 8%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.fullimg p{
+    text-align: center;
+}
+.fullimg:hover{
+    transform: translateY(-10px);
+}
+.fullimg2{
+    position: absolute;
+    width: fit-content; 
+    top: 24%;
+    margin-left: 26%;
+    transition: 0.3s;
+    cursor: pointer; 
+}
+.fullimg2 p{
+    text-align: center;
+}
+.fullimg2:hover{
+    transform: translateY(-10px);
+}
+.fullimg3{
+    position: absolute;
+    width: fit-content; 
+    top: 22%;
+    margin-left: 51%; 
+    transition: 0.3s;
+    cursor: pointer;
+}
+.fullimg3 p{
+    text-align: center;
+}
+.fullimg3:hover{
+    transform: translateY(-10px);
+}
+.fullimg3 img{
+    width: 250px;
+    height: auto;
+}
+.fullimg4{
+    position: absolute;
+    width: fit-content; 
+    top: 29%;
+    margin-left: 77%; 
+    transition: 0.3s;
+    cursor: pointer;
+}
+.fullimg4 p{
+    text-align: center;
+}
+.fullimg4:hover{
+    transform: translateY(-10px);
+}
+.title2{
+text-align: center;
+top: 50%;
+width: 100%;
+position: absolute;
+}
+.justTheTwo{
+    width: 66%;
+    height: fit-content;
+    background: radial-gradient(circle at 20% 80%, rgb(255, 182, 193) 60%, rgb(190, 83, 119) 95%) fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: inset 0 0 10px 5px white;
+    display: none;
+}
+.justTheTwo H2{
+    margin: 20PX;
+}
+.justTheTwo p{
+    margin: 20PX;
+    font-size: 20px;
+    color: white;
+}
+#closeBtn{
+    position: absolute;
+    right: 3%;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    color: #020202;
+    border: #020202 solid 1px;
+    cursor: pointer;
+}
+.ily{
+    width: 66%;
+    height: fit-content;
+    background: radial-gradient(circle at 20% 80%, rgb(255, 182, 193) 60%, rgb(190, 83, 119) 95%) fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: inset 0 0 10px 5px white;
+    display: none;
+}
+.ily H2{
+    margin: 20PX;
+}
+.ily p{
+    margin: 20PX;
+    font-size: 20px;
+    color: white;
+}
+.book{
+    width: 66%;
+    height: fit-content;
+    background: radial-gradient(circle at 20% 80%, rgb(255, 182, 193) 60%, rgb(190, 83, 119) 95%) fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: inset 0 0 10px 5px white;
+    display: none; 
+}
+.imageWrap{
+    display: flex;
+    gap: 20px;
+    margin: 20px 10px;
+}
+.imageWrap img{
+    height: 300px;
+    width: auto;
+    border-radius: 15px;
+}
+audio{
+    margin-top: 20px;
+}
+.message{
+    width: 66%;
+    height: fit-content;
+    background: radial-gradient(circle at 20% 80%, rgb(255, 182, 193) 60%, rgb(190, 83, 119) 95%) fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: inset 0 0 10px 5px white;
+    display: none;
+      
+}
+.message h2{
+    margin: 20px;
+}
+.message p{
+    margin: 20px;
+    font-size: 20px;
+}
+.thing{
+    position: relative;
+    overflow: hidden;
+}
+.thing h2{
+    color: #333333;
+    padding: 10px;
+}
+.thing img{
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    height: 90%;
+    width: auto;
+}
+.thing2{
+    height: 200px;
+    width: 80%;
+    background-color: #f6f6f6;
+    margin: 10%;
+    margin-top: 5%;
+    border-radius: 25px;
+}
+.thing2{
+    position: relative;
+    overflow: hidden;
+}
+.thing2 h2{
+    color: #333333;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+.thing2 img{
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+    height: 90%;
+    width: auto;
+}

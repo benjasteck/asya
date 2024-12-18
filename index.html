@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="a cute site for my gf">
+    <meta name="author" content="Benjamin Steckmetz">
+    <meta name="robots" content="index, follow">
+    <!--FACEBOOK(meta)-->
+    <meta property="og:title" content="Asyas birtday">
+    <meta property="og:description" 
+    content="a cute site for my gf">
+
+    <meta property="og:image" content="images/HeroIndex.png">
+    <meta property="og:url" content="https://benjasteck.github.io/plastic/index.html">
+    <!--tWITTER-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Global Plastic Treaty">
+    <meta name="twitter:description" 
+    content="a cute site for my gf">
+
+    <meta name="twitter:image" content="images/mediumLogo.png">
+    <meta name="google-site-verification" content="wGobuLv3lLfWEThGrDh12OOBFQ8OWAw5casnk8qYf-0" />
+
+    <title>Asyas birthday</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <script src="https://kit.fontawesome.com/6cff64fb2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="heart-container"></div>
+<div id="heart-container2"></div>
+    <div class="center-wrapper">
+        <div class="container">
+            <img src="images/bear-hug.gif" alt="" id="image">
+            <h1 id="Title">Do you love me?</h1>
+            <div class="buttonPart">
+                <div class="btnn" onclick="saidYes()">Yes</div>
+                <div class="btnn" id="moveButton">No</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var Title = document.getElementById("Title");
+    var image = document.getElementById("image");
+    var yesClicked = 0
+    function saidYes(){
+        yesClicked++; 
+        if (yesClicked == 1){
+            Title.innerHTML = "REALLYYYY?"
+            image.src = "images/ily.gif"
+        }
+        if (yesClicked == 2){
+            Title.innerHTML = "REALLYYYY REAALLYYYYY???"
+            image.src = "images/hug-virtual-hug.gif"
+        }
+        if (yesClicked == 3){
+            Title.innerHTML = "YAAAYYY I LOVE U TOO WANT YOUR GIFTTT?"
+            image.src = "images/giftClosed.png"
+            heartgen();
+        }
+        if (yesClicked == 4){
+            Title.innerHTML = "IIITSSSS NOTHINGGG... lol SIKE :3 i bet i gotcha hehe.. press yes to continue im too lazy to change it :3"
+            image.src = "images/Giftopen.png"
+        }
+        if (yesClicked == 5){
+            window.location.href = "mainSite.html";
+        }
+    }
+    
+    
+
+
+    const moveButton = document.getElementById("moveButton");
+
+function moveRandom() {
+    // Get viewport dimensions
+    const maxX = window.innerWidth - moveButton.clientWidth;
+    const maxY = window.innerHeight - moveButton.clientHeight;
+
+    // Generate random positions
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    // Move the button
+    moveButton.style.position = "absolute";
+    moveButton.style.left = randomX + "px";
+    moveButton.style.top = randomY + "px";
+}
+
+// Move the button on hover
+moveButton.addEventListener("mouseenter", moveRandom);
+</script>
+<script>
+    const heartContainer = document.getElementById('heart-container');
+    const heartContainer2 = document.getElementById('heart-container2');
+
+    function getRandomY() {
+        // Generate a random y value based on the window height
+        const windowHeight = window.innerHeight - 28;
+
+        return Math.floor(Math.random() * windowHeight);
+    }
+    function getRandomX() {
+
+        // Generate a random y value based on the window height
+
+        const windowWidth = window.innerWidth - 25;
+
+        return Math.floor(Math.random() * windowWidth);
+    }
+    function generateHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '&#10084;'; // Heart symbol
+
+        // Set a random y position
+        const randomY = getRandomY();
+        const randomX = getRandomX();
+        heart.style.top = `${randomY}px`;
+        heart.style.left = `${randomX}px`;
+
+        heartContainer.appendChild(heart);
+
+        // Remove the heart after a delay (e.g., 3 seconds)
+        setTimeout(() => {
+            heart.remove();
+        }, 4000);
+    }
+    function generateHeart2() {
+        const heart2 = document.createElement('div');
+        heart2.className = 'heart2';
+        heart2.innerHTML = '💕'; // Heart symbol
+
+        // Set a random y position
+        const randomY = getRandomY();
+        const randomX = getRandomX();
+        heart2.style.top = `${randomY}px`;
+        heart2.style.left = `${randomX}px`;
+
+        heartContainer2.appendChild(heart2);
+
+        // Remove the heart after a delay (e.g., 3 seconds)
+        setTimeout(() => {
+            heart2.remove();
+        }, 4000);
+    }
+    function heartgen(){
+        
+        
+            for (var i = 0; i < 50; i++) {
+                generateHeart();
+                generateHeart2();
+                setTimeout(function(index) {
+                    generateHeart();
+                    generateHeart2();
+                }, i * 100, i);
+                setTimeout(function(index) {
+                    generateHeart();
+                    generateHeart2();
+                }, i * 300, i);
+                setTimeout(function(index) {
+                    generateHeart();
+                    generateHeart2();
+                }, i * 1000, i);
+            }
+        
+    }
+</script>
